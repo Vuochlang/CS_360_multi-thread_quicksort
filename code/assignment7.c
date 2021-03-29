@@ -119,11 +119,9 @@ static void quickSort(void* p) {
 
         if (createLeft) {
             pthread_join(threads[0], NULL);
-            threadCounter -= 1;
         }
         if (createRight) {
             pthread_join(threads[1], NULL);
-            threadCounter -= 1;
         }
     } else insertSort(array,i,j);           /* for a small range use insert sort */
 }
